@@ -31,6 +31,11 @@ class App extends React.Component {
                 <input type="password" id="password" className="FormField__Input" placeholder="Enter your password" name="password"/>
               </div>
 
+              <div className="FormField">
+                <label className="FormField__label" htmlFor="email">E-Mail Address</label>
+                <input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email" />
+              </div>
+
 
 
             </form>
