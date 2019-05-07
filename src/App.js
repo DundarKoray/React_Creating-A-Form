@@ -40,10 +40,17 @@ class App extends React.Component {
               </div>
 
               {/*CHECKBOX*/}
-              <label className="FormField__CheckboxLabel">
-                <input className="FormField__Checkbox" type="checkbox" name="hasAgreed" /> I aggree all statements in <a href="" className="FormField__TermsLink">terms of service</a>
-              </label>
-
+              <div className="FormField">
+                <label className="FormField__CheckboxLabel">
+                  <input className="FormField__Checkbox" type="checkbox" name="hasAgreed" /> I aggree all statements in <a href="" className="FormField__TermsLink">terms of service</a>
+                </label>
+              </div>
+              
+              {/*BUTTON*/}
+              <div className="FormField">
+                <button className="FormField__Button mr-20">Sign Up</button> 
+                <a href="#" className="FormField__Link">I'm already member</a>
+              </div>
 
 
             </form>
