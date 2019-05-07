@@ -20,21 +20,29 @@ class App extends React.Component {
 
           <div className="FormCenter">
             <form className="FormFields" onSubmit={this.handleSubmit}>
-
+              
+              {/*FULL NAME*/}
               <div className="FormField">
                 <label className="FormField__Label" htmlFor="name">Full Name</label>
                 <input type="text" id="name" className="FormField__Input" placeholder="Enter your full name" name="name"/>
               </div>
-
+              
+              {/*PASSWORD*/}
               <div className="FormField">
                 <label className="FormField__Label" htmlFor="password">Password</label>
                 <input type="password" id="password" className="FormField__Input" placeholder="Enter your password" name="password"/>
               </div>
 
+              {/*E-MAIL ADDRESS*/}
               <div className="FormField">
-                <label className="FormField__label" htmlFor="email">E-Mail Address</label>
+                <label className="FormField__Label" htmlFor="email">E-Mail Address</label>
                 <input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email" />
               </div>
+
+              {/*CHECKBOX*/}
+              <label className="FormField__CheckboxLabel">
+                <input className="FormField__Checkbox" type="checkbox" name="hasAgreed" /> I aggree all statements in <a href="" className="FormField__TermsLink">terms of service</a>
+              </label>
 
 
 
