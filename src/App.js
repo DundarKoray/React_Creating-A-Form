@@ -1,11 +1,14 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import SignUpForm from './pages/SignUpForm'
 
 import './App.css';
 
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
+      <Router>
+        <div className="App">
         <div className="App__Aside"></div>
         <div className="App__Form">
 
@@ -15,49 +18,20 @@ class App extends React.Component {
           </div>
 
           <div className="FormTitle">
-            <a href="#" className="FormTitle__Link">Sign In</a> or <a href="#" className="FormTitle__Link FormTitle__Link--Active">Sign Up</a>
+            <Link to="/sign-in" className="FormTitle__Link">Sign In</Link> or <Link to="/" className="FormTitle__Link FormTitle__Link--Active">Sign Up</Link>
           </div>
 
-          <div className="FormCenter">
-            <form className="FormFields" onSubmit={this.handleSubmit}>
-              
-              {/*FULL NAME*/}
-              <div className="FormField">
-                <label className="FormField__Label" htmlFor="name">Full Name</label>
-                <input type="text" id="name" className="FormField__Input" placeholder="Enter your full name" name="name"/>
-              </div>
-              
-              {/*PASSWORD*/}
-              <div className="FormField">
-                <label className="FormField__Label" htmlFor="password">Password</label>
-                <input type="password" id="password" className="FormField__Input" placeholder="Enter your password" name="password"/>
-              </div>
+          <Route exact path="/" Component={SignUpForm}>
+          
+          </Route>
 
-              {/*E-MAIL ADDRESS*/}
-              <div className="FormField">
-                <label className="FormField__Label" htmlFor="email">E-Mail Address</label>
-                <input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email" />
-              </div>
+          <Route path="/sign-in">
+            <h1>Sign In</h1>
+          </Route>
 
-              {/*CHECKBOX*/}
-              <div className="FormField">
-                <label className="FormField__CheckboxLabel">
-                  <input className="FormField__Checkbox" type="checkbox" name="hasAgreed" /> I aggree all statements in <a href="" className="FormField__TermsLink">terms of service</a>
-                </label>
-              </div>
-              
-              {/*BUTTON*/}
-              <div className="FormField">
-                <button className="FormField__Button mr-20">Sign Up</button> 
-                <a href="#" className="FormField__Link">I'm already member</a>
-              </div>
-
-
-            </form>
-          </div>
-  
         </div>
       </div>
+      </Router>
     )
   }
 }
