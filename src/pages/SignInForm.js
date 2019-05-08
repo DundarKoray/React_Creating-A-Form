@@ -6,8 +6,8 @@ class SignInForm extends React.Component {
         super()
         
         this.state = {
-            email: "",
-            password: ""
+            email: '',
+            password: ''
         }
 
         this.handleChange = this.handleChange.bind(this)
@@ -40,7 +40,7 @@ class SignInForm extends React.Component {
     render(){
         return (
             <div className="FormCenter">
-                <form onSubmit={this.handleSubmit} className="FormFields" onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} className="FormFields">
               
                     {/*E-MAIL ADDRESS*/}
                     <div className="FormField">

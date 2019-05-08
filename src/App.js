@@ -21,7 +21,7 @@ class App extends React.Component {
 
             {/* Form Title Switcher */}
             <div className="FormTitle">
-              <NavLink to="/sign-in" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign In</NavLink> or <NavLink exact to="/" activeClassName="FormTitle__Link--Active "className="FormTitle__Link">Sign Up</NavLink>
+              <NavLink to="/sign-in" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign In</NavLink> or <NavLink exact to="/" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign Up</NavLink>
             </div>
 
             <Route exact path="/" component={SignUpForm}>
